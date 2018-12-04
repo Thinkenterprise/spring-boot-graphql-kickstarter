@@ -11,12 +11,12 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.observables.ConnectableObservable;
 
 @Component
-public class RouteUpdatePublisher {
+public class RouteCreatePublisher {
 
     private final Flowable<Route> publisher;
     private ObservableEmitter<Route> observableEmitter;
 
-    public RouteUpdatePublisher() {
+    public RouteCreatePublisher() {
         Observable<Route> stockPriceUpdateObservable = Observable.create(emitter -> {
             observableEmitter=emitter;
         });

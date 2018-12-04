@@ -3,7 +3,8 @@ package com.thinkenterprise.resolver.mutation;
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.thinkenterprise.domain.route.Route;
 import com.thinkenterprise.domain.route.RouteRepository;
-import com.thinkenterprise.publisher.RouteUpdatePublisher;
+import com.thinkenterprise.publisher.RouteCreatePublisher;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,11 +15,11 @@ public class RootMutationResolver implements GraphQLMutationResolver {
 
     RouteRepository routeRepository;
 
-    RouteUpdatePublisher routeUpdatePublisher;
+    RouteCreatePublisher routeUpdatePublisher;
 
     @Autowired
     public RootMutationResolver(RouteRepository routeRepository,
-                                RouteUpdatePublisher routeUpdatePublisher) {
+                                RouteCreatePublisher routeUpdatePublisher) {
         this.routeRepository=routeRepository;	
         this.routeUpdatePublisher=routeUpdatePublisher;
     }
