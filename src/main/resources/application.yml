@@ -1,0 +1,38 @@
+#Configure GraphQL 
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+    subscriptions:
+      websocket:
+        path: /graphql
+  tools:
+    schemaLocationPattern: "**/*.graphql"
+
+# Configure GraphiQL 
+graphiql:
+  mapping: /graphiql
+  endpoint: /graphql
+  enabled: true
+  cdn:
+      enabled: false
+
+## Database Configuration 
+spring:
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  main:
+    allow-bean-definition-overriding: true
+
+# Data Source Settings 
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE 
+    platform: h2
+    
+server:
+  port: 4000
+    
