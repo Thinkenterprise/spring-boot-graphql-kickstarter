@@ -9,7 +9,7 @@ type Query {
 }
 
 type Mutation {
-	createRoute(): Route
+	createRoute: Route
 }
 
 type Subscription {
