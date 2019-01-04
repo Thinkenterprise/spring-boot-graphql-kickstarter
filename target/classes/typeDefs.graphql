@@ -1,0 +1,35 @@
+schema {
+	query: Query
+	mutation: Mutation
+	subscription: Subscription
+}
+
+type Query { 
+	routes:[Route]
+}
+
+type Mutation {
+	createRoute: Route
+}
+
+type Subscription {
+    registerRouteCreated: Route 
+}
+
+type Route {
+	id: ID!
+	flightNumber: String!
+	departure: String
+	destination: String
+	disabled: Boolean
+	flights: [Flight!]
+}
+
+
+scalar LocalDate
+
+type Flight {
+	id: ID!
+	price: Float!
+	date: LocalDate!
+}
