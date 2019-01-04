@@ -1,6 +1,0 @@
-query {
-  routes {
-    id
-    flightNumber
-  }
-}
