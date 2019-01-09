@@ -26,8 +26,7 @@ public class RootQueryResolver implements GraphQLQueryResolver {
 	}
 	
 	public List<Route> routes() {
-		throw new RouteException("My Own Exception");
-		//return routeRepository.findAll();
+		return routeRepository.findAll();
 	} 
 
 	@ExceptionHandler(RouteException.class)

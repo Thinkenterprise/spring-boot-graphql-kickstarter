@@ -1,4 +1,4 @@
-package com.thinkenterprise.test;
+package com.thinkenterprise;
 
 import static graphql.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
