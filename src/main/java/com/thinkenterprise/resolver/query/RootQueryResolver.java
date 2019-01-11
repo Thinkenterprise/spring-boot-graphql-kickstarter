@@ -9,6 +9,7 @@ import com.thinkenterprise.error.RouteException;
 import com.thinkenterprise.error.RouteGraphQLError;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -25,6 +26,7 @@ public class RootQueryResolver implements GraphQLQueryResolver {
 		this.routeRepository=routeRepository;	
 	}
 	
+	@PreAuthorize("hasRole('ADMIN')")
 	public List<Route> routes() {
 		return routeRepository.findAll();
 	} 

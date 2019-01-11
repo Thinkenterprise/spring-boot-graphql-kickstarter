@@ -18,10 +18,8 @@ public class Route extends AbstractEntity {
 	private String destination;
 	private Boolean disabled;
 
-	@OneToOne
-	private Route parent;
 
-	@OneToMany(mappedBy = "route", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+	@OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
 	private Set<Flight> flights;
 
 	public Route() {
@@ -78,14 +76,6 @@ public class Route extends AbstractEntity {
 
 	public void setFlights(Set<Flight> flights) {
 		this.flights = flights;
-	}
-
-	public void setParent(Route route) {
-		this.parent = route;
-	}
-
-	public Route getParent() {
-		return this.parent;
 	}
 
 }

@@ -25,7 +25,6 @@ type Route {
 	flights: [Flight!]
 }
 
-
 scalar LocalDate
 
 type Flight {

@@ -26,6 +26,8 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: create-drop
+    security:
+      disable: true
 
 # Data Source Settings 
   datasource:
@@ -34,4 +36,3 @@ spring:
     
 server:
   port: 4000
-    
