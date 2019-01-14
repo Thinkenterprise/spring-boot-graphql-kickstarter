@@ -9,7 +9,7 @@ graphql:
         path: /graphql
     exception-handlers-enabled: true
   tools:
-    schemaLocationPattern: "**/*.graphql"
+    schemaLocationPattern: "**/*.graphqls"
 
 # Configure GraphiQL 
 graphiql:
