@@ -9,7 +9,9 @@ type Query {
 }
 
 type Mutation {
-	createRoute: Route
+	createRoute(flightNumber: String!): Route
+	updateRoute(id: ID!, disabled: Boolean): Route
+	deleteRoute(id: ID!): Boolean
 }
 
 type Subscription {

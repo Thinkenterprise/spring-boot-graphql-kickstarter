@@ -1,0 +1,1 @@
+mutation deleteRoute { deleteRoute ( id: "1" ) }
