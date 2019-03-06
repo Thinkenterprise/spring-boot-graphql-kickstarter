@@ -14,7 +14,6 @@ public class RouteController {
     private RouteRepository routeRepository;
 
     @GetMapping("routes")
-    //@PreAuthorize("hasRole('ADMIN')")
     public Iterable<Route> routes() {
         return routeRepository.findAll();
     }
