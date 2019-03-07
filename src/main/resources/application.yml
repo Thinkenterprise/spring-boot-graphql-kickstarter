@@ -27,6 +27,7 @@ spring:
       ddl-auto: create-drop
     security:
       disable: true
+  profiles:    active:    - nosecurity
 
 # Data Source Settings 
   datasource:
@@ -35,3 +36,5 @@ spring:
     
 server:
   port: 4000
+  
+  
