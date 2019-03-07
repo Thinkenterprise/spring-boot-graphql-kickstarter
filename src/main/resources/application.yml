@@ -27,7 +27,8 @@ spring:
       ddl-auto: create-drop
     security:
       disable: true
-  profiles:    active:    - httpbasic
+  profiles:    active:    - nosecurity
+  security:    oauth2:      resourceserver:        jwt:          jwk-set-uri: FIX ME    
 
 # Data Source Settings 
   datasource:

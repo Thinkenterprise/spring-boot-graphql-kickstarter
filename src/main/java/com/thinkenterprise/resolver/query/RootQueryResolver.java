@@ -3,6 +3,7 @@ package com.thinkenterprise.resolver.query;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -27,6 +28,7 @@ public class RootQueryResolver implements GraphQLQueryResolver {
 	}
 	
 	//@PreAuthorize("hasRole('ADMIN')")
+	//@PreAuthorize("#oauth2.hasScope('random')")
 	public List<Route> routes(DataFetchingEnvironment dataFetchingEnvironment) {
 		return routeRepository.findAll();
 	} 
