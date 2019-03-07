@@ -9,7 +9,6 @@ import graphql.servlet.GraphQLContext;
 import graphql.servlet.GraphQLContextBuilder;
 
 public class RouteGraphQLContextBuilder implements GraphQLContextBuilder {
-
 	
 		private String token;
 	

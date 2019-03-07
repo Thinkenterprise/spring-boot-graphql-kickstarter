@@ -27,7 +27,7 @@ spring:
       ddl-auto: create-drop
     security:
       disable: true
-  profiles:    active:    - nosecurity
+  profiles:    active:    - httpbasic
 
 # Data Source Settings 
   datasource:
