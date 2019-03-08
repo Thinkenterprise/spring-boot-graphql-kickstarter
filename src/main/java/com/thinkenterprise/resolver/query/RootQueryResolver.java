@@ -28,7 +28,7 @@ public class RootQueryResolver implements GraphQLQueryResolver {
 	}
 	
 	//@PreAuthorize("hasRole('ADMIN')")
-	//@PreAuthorize("#oauth2.hasScope('random')")
+	@PreAuthorize("#oauth2.hasScope('read')")
 	public List<Route> routes(DataFetchingEnvironment dataFetchingEnvironment) {
 		return routeRepository.findAll();
 	} 
