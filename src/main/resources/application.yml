@@ -28,7 +28,11 @@ spring:
     security:
       disable: true
   profiles:    active:    - nosecurity
+    - withContext
   security:    oauth2:      resourceserver:        jwt:          jwk-set-uri: FIX ME    
+          
+  h2:    console:      enabled: true
+      path: /h2-console
 
 # Data Source Settings 
   datasource:

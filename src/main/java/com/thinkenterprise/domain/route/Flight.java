@@ -14,6 +14,8 @@ public class Flight extends AbstractEntity {
 	
 	private LocalDate date;
 
+	@ManyToOne
+	private Route route;
 
 	public Flight() {
 		super();
@@ -39,6 +41,14 @@ public class Flight extends AbstractEntity {
 	
 	public void setDate(LocalDate date) {
 		this.date = date;
+	}
+	
+	public Route getRoute() {
+		return route;
+	}
+
+	public void setRoute(Route route) {
+		this.route = route;
 	}
 
 }

@@ -33,4 +33,5 @@ type Flight {
 	id: ID!
 	price: Float!
 	date: LocalDate!
+	route:Route!
 }

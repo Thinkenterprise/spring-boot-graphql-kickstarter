@@ -1,5 +1,6 @@
 package com.thinkenterprise.domain.route;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -19,8 +20,8 @@ public class Route extends AbstractEntity {
 	private Boolean disabled;
 
 
-	@OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
-	private Set<Flight> flights;
+	@OneToMany(mappedBy = "route", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+	private List<Flight> flights;
 
 	public Route() {
 		super();
@@ -70,11 +71,11 @@ public class Route extends AbstractEntity {
 		this.flightNumber = number;
 	}
 
-	public Set<Flight> getFlights() {
+	public List<Flight> getFlights() {
 		return flights;
 	}
 
-	public void setFlights(Set<Flight> flights) {
+	public void setFlights(List<Flight> flights) {
 		this.flights = flights;
 	}
 
