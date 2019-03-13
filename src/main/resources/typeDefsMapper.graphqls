@@ -1,0 +1,25 @@
+schema {
+	query: Query
+}
+
+type Query { 
+	routes:[Route]
+}
+
+type Route {
+	id: ID!
+	flightNumber: String!
+	departure: String
+	destination: String
+	disabled: Boolean
+	flights: [Flight!]
+}
+
+scalar LocalDate
+
+type Flight {
+	id: ID!
+	price: Float!
+	date: LocalDate!
+	route:Route!
+}

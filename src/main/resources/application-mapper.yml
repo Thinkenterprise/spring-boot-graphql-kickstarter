@@ -1,0 +1,4 @@
+#Configure GraphQL 
+graphql:
+  tools:
+    schemaLocationPattern: "**/typeDefsMapper.graphqls"
