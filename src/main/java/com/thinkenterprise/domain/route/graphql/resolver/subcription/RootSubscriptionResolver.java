@@ -13,15 +13,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class RootSubscriptionResolver implements GraphQLSubscriptionResolver {
 
-        RouteCreatePublisher routeCreatePublisher;
+	RouteCreatePublisher routeCreatePublisher;
 
-        @Autowired
-        public RootSubscriptionResolver(RouteCreatePublisher routeCreatePublisher) {
-                this.routeCreatePublisher=routeCreatePublisher;
-        }
+	@Autowired
+	public RootSubscriptionResolver(RouteCreatePublisher routeCreatePublisher) {
+		this.routeCreatePublisher = routeCreatePublisher;
+	}
 
-        public Publisher<Route> registerRouteCreated() {
-                return routeCreatePublisher.getPublisher();
-        }
+	public Publisher<Route> registerRouteCreated() {
+		return routeCreatePublisher.getPublisher();
+	}
 
 }

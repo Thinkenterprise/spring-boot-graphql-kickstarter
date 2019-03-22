@@ -17,6 +17,14 @@ import com.thinkenterprise.domain.route.jpa.repository.RouteRepository;
 
 import graphql.GraphQLError;
 import graphql.schema.DataFetchingEnvironment;
+/** 
+ * 
+ * 	@PreAuthorize("hasRole('read')")
+	@PreAuthorize("#oauth2.hasScope('read')")
+ * 
+ * */
+
+
 
 @Profile("!mapper")
 @Component(RootQueryResolver.ROOT_QUERY_RESOLVER)
@@ -39,13 +47,16 @@ public class RootQueryResolver implements GraphQLQueryResolver {
 	}
 	
 	//@PreAuthorize("hasRole('read')")
-	@PreAuthorize("#oauth2.hasScope('read')")
-	public List<Route> routes() {
+	//@PreAuthorize("#oauth2.hasScope('read')")
+	public List<Route> routes(DataFetchingEnvironment dataFetchingEnvironment) {
 		
-		if(!exception)	
+		System.out.println(dataFetchingEnvironment.getContext().toString());
+		
+		if(!exception)
 			return routeRepository.findAll();
 		else 
 			throw new RouteException("Test Exception ....");
+	
 	} 
 
 	@ExceptionHandler(RouteException.class)

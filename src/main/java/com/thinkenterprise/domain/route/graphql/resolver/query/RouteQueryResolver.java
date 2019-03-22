@@ -33,18 +33,20 @@ public class RouteQueryResolver implements GraphQLResolver<Route> {
     }
        
 	
-    public List<Flight> flights(Route route, DataFetchingEnvironment dataFetchingEnvironment) {
-    	System.out.println(dataFetchingEnvironment.getContext().toString());
-    	return flightRepository.findByRoute(route.getId());
+    public List<Flight> flights(Route route) {
+    	return route.getFlights();
+    	//return flightRepository.findByRoute(route.getId());
+    	
     }
    
+	
     
- /*
-    public CompletableFuture<List<Flight>> flights(Route route, DataFetchingEnvironment dataFetchingEnvironment) {  
-    	DataLoader<Long,Flight> dataLoader = dataFetchingEnvironment.getDataLoader("flight");
-    	return dataLoader.loadMany(KeyUtils.getKeys(route.getId()));
-    }
-  */
+//    public CompletableFuture<List<Flight>> flights(Route route, DataFetchingEnvironment dataFetchingEnvironment) {  
+//    	DataLoader<Long,Flight> dataLoader = dataFetchingEnvironment.getDataLoader("flight");
+//    	return dataLoader.loadMany(KeyUtils.getKeys(route.getId()));
+//    }
+//    
+ 
     
 
 }

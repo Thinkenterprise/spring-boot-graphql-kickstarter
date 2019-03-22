@@ -8,8 +8,8 @@ import javax.websocket.server.HandshakeRequest;
 import org.dataloader.DataLoaderRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.thinkenterprise.domain.route.graphql.cache.FlightBatchLoader;
-import com.thinkenterprise.domain.route.graphql.cache.FlightDataLoader;
+import com.thinkenterprise.domain.route.graphql.performance.FlightBatchLoader;
+import com.thinkenterprise.domain.route.graphql.performance.FlightDataLoader;
 import com.thinkenterprise.domain.route.jpa.repository.FlightRepository;
 
 import graphql.servlet.GraphQLContext;

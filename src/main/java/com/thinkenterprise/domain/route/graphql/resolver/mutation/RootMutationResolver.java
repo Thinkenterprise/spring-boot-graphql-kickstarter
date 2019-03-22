@@ -32,8 +32,10 @@ public class RootMutationResolver implements GraphQLMutationResolver {
         
         Route route = new Route();
         route.setFlightNumber(flightNumber);
+        routeRepository.save(route);
         routeUpdatePublisher.emit(route);
-        return routeRepository.save(route);
+        
+        return route;
 
     }
     

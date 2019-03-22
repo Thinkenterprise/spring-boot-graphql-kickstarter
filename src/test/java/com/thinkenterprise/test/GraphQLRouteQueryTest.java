@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
-public class GraphQLQueryTest {
+public class GraphQLRouteQueryTest {
 
     @Autowired
     private GraphQLTestTemplate graphQLTestTemplate;
@@ -28,7 +28,7 @@ public class GraphQLQueryTest {
         GraphQLResponse response  = graphQLTestTemplate.postForResource("routes.graphql");
         assertNotNull(response);
         assertTrue(response.isOk());
-        //assertEquals("101", response.get("$.data.routes[0].id"));
+        assertEquals("101", response.get("$.data.routes[0].id"));
     }
     
      

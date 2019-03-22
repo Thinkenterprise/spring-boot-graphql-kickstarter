@@ -23,7 +23,6 @@ spring:
   profiles:
     active:
     - noSecurity
-    - context
      
   jpa:
     generate-ddl: true
@@ -53,7 +52,7 @@ server:
 #    oauth2:
 #      resourceserver:
 #        jwt:
-#          jwk-set-uri: FIX ME    
+#          jwk--seturi: FIX ME    
   
 security:
    oauth2:

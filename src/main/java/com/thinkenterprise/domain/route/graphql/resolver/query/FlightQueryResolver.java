@@ -33,9 +33,11 @@ public class FlightQueryResolver implements GraphQLResolver<Flight> {
 	
 	public Route route(Flight flight) {	
 		
-		//return routetRepository.findByFlight(flight.getId()).iterator().next();
 		return routetRepository.findById(flight.getRoute().getId()).get();
-	    // If we have already loaded the references eager, no access to the repository is necessary
+		
+		
+		//return routetRepository.findByFlight(flight.getId()).iterator().next();
+		// If we have already loaded the references eager, no access to the repository is necessary
 		//return flight.getRoute();
 	}
 }
