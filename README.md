@@ -4,15 +4,15 @@ Sample application for the **Java Magazin 5.19** article
 
 ## Features 
 
-1. CRUD over GraphQL API 
-2. Test your GraphQL API
-3. Create GraphQL Error over Exception Handling
-4. Model Mapping over Orika  
-5. Subscribe on Events over your GraphQL API 
-6. Secure your GraphQL API over Basic Authentication     
-7. Secure your GraphQL API over OAuth 2/JWT 
-8. Performance Tuning over Batch Loading & Caching  
-9. GraphQL Context 
+1. **CRUD** over GraphQL API 
+2. **Test** your GraphQL API
+3. Create GraphQL Error over **Exception Handling**
+4. Subscribe on Events over your GraphQL API 
+5. **DTOs** Model Mapping over Orika  
+6. Secure your GraphQL API over **Basic Authentication**     
+7. Secure your GraphQL API over **OAuth2/JWT** 
+8. **Performance** Tuning over Batch Loading & Caching  
+9. GraphQL **Context** 
 
 ## GrapQL Queries 
 All supported GraphQL Queries are stored under `src/test/resources`
