@@ -2,14 +2,20 @@ package com.thinkenterprise.domain.route.graphql.model;
 
 import java.time.LocalDate;
 
+/**  
+* GraphQL Spring Boot Samples 
+* Design and Development by msg Applied Technology Research
+* Copyright (c) 2018 msg systems ag (http://www.msg-systems.com/)
+* All Rights Reserved.
+* 
+* @author Michael Schäfer
+*/
+
 public class GraphQLFlight  {
 
 	private Long id;
-	
 	private double price;
-	
 	private LocalDate date;
-
 	private GraphQLRoute route;
 
 	public GraphQLFlight() {

@@ -13,6 +13,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**  
+* GraphQL Spring Boot Samples 
+* Design and Development by msg Applied Technology Research
+* Copyright (c) 2018 msg systems ag (http://www.msg-systems.com/)
+* All Rights Reserved.
+* 
+* @author Michael Schäfer
+*/
+
 @RestController
 public class RouteController {
 

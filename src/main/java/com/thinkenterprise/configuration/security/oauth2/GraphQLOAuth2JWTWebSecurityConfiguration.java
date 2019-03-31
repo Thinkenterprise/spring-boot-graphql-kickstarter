@@ -5,6 +5,15 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+/**  
+* GraphQL Spring Boot Samples 
+* Design and Development by msg Applied Technology Research
+* Copyright (c) 2018 msg systems ag (http://www.msg-systems.com/)
+* All Rights Reserved.
+* 
+* @author Michael Schäfer
+*/
+
 @Configuration
 @Profile("OAuth2Security")
 public class GraphQLOAuth2JWTWebSecurityConfiguration extends WebSecurityConfigurerAdapter{

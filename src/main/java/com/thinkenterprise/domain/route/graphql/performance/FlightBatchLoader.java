@@ -11,6 +11,15 @@ import org.springframework.stereotype.Component;
 import com.thinkenterprise.domain.route.jpa.model.Flight;
 import com.thinkenterprise.domain.route.jpa.repository.FlightRepository;
 
+/**  
+* GraphQL Spring Boot Samples 
+* Design and Development by msg Applied Technology Research
+* Copyright (c) 2018 msg systems ag (http://www.msg-systems.com/)
+* All Rights Reserved.
+* 
+* @author Michael Schäfer
+*/
+
 @Component
 public class FlightBatchLoader implements BatchLoader<Long, Flight>{
 	

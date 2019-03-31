@@ -1,13 +1,20 @@
 package com.thinkenterprise.domain.route.jpa.model;
 
 import java.util.List;
-import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.CascadeType;
+
+/**  
+* GraphQL Spring Boot Samples 
+* Design and Development by msg Applied Technology Research
+* Copyright (c) 2018 msg systems ag (http://www.msg-systems.com/)
+* All Rights Reserved.
+* 
+* @author Michael Schäfer
+*/
 
 @Entity
 public class Route extends AbstractEntity {
@@ -18,7 +25,7 @@ public class Route extends AbstractEntity {
 	private Boolean disabled;
 
 
-	@OneToMany(mappedBy = "route", cascade = CascadeType.REMOVE, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "route", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
 	private List<Flight> flights;
 
 	public Route() {

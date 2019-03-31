@@ -15,6 +15,15 @@ import com.thinkenterprise.domain.route.jpa.repository.FlightRepository;
 import graphql.servlet.GraphQLContext;
 import graphql.servlet.GraphQLContextBuilder;
 
+/**  
+* GraphQL Spring Boot Samples 
+* Design and Development by msg Applied Technology Research
+* Copyright (c) 2018 msg systems ag (http://www.msg-systems.com/)
+* All Rights Reserved.
+* 
+* @author Michael Schäfer
+*/
+
 public class RouteGraphQLContextBuilder implements GraphQLContextBuilder {
 	
 		private String token;

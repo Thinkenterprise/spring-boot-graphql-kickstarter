@@ -1,24 +1,31 @@
 package com.thinkenterprise.domain.route.graphql.resolver.mutation;
 
-import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import com.thinkenterprise.domain.route.RouteException;
-import com.thinkenterprise.domain.route.graphql.publisher.RouteCreatePublisher;
-import com.thinkenterprise.domain.route.jpa.model.Route;
-import com.thinkenterprise.domain.route.jpa.repository.RouteRepository;
-
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import com.coxautodev.graphql.tools.GraphQLMutationResolver;
+import com.thinkenterprise.domain.route.RouteException;
+import com.thinkenterprise.domain.route.graphql.publisher.RouteCreatePublisher;
+import com.thinkenterprise.domain.route.jpa.model.Route;
+import com.thinkenterprise.domain.route.jpa.repository.RouteRepository;
+
+/**  
+* GraphQL Spring Boot Samples 
+* Design and Development by msg Applied Technology Research
+* Copyright (c) 2018 msg systems ag (http://www.msg-systems.com/)
+* All Rights Reserved.
+* 
+* @author Michael Schäfer
+*/
 
 @Profile("!mapper")
 @Service
 public class RootMutationResolver implements GraphQLMutationResolver {
 
     RouteRepository routeRepository;
-
     RouteCreatePublisher routeUpdatePublisher;
 
     @Autowired
@@ -28,15 +35,12 @@ public class RootMutationResolver implements GraphQLMutationResolver {
         this.routeUpdatePublisher=routeUpdatePublisher;
     }
 
-    public Route createRoute(String flightNumber) {
-        
+    public Route createRoute(String flightNumber) {  
         Route route = new Route();
         route.setFlightNumber(flightNumber);
         routeRepository.save(route);
         routeUpdatePublisher.emit(route);
-        
         return route;
-
     }
     
     public Route updateRoute(Long id, Boolean disabled) {

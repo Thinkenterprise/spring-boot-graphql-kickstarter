@@ -7,6 +7,15 @@ import javax.websocket.server.HandshakeRequest;
 
 import graphql.servlet.GraphQLContext;
 
+/**  
+* GraphQL Spring Boot Samples 
+* Design and Development by msg Applied Technology Research
+* Copyright (c) 2018 msg systems ag (http://www.msg-systems.com/)
+* All Rights Reserved.
+* 
+* @author Michael Schäfer
+*/
+
 public class RouteGraphQLContext extends GraphQLContext{
 
 	

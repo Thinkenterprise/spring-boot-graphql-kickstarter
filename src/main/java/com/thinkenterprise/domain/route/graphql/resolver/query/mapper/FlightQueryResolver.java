@@ -6,8 +6,15 @@ import org.springframework.stereotype.Component;
 import com.coxautodev.graphql.tools.GraphQLResolver;
 import com.thinkenterprise.domain.route.graphql.model.GraphQLFlight;
 import com.thinkenterprise.domain.route.graphql.model.GraphQLRoute;
-import com.thinkenterprise.domain.route.jpa.model.Flight;
-import com.thinkenterprise.domain.route.jpa.model.Route;
+
+/**  
+* GraphQL Spring Boot Samples 
+* Design and Development by msg Applied Technology Research
+* Copyright (c) 2018 msg systems ag (http://www.msg-systems.com/)
+* All Rights Reserved.
+* 
+* @author Michael Schäfer
+*/
 
 @Profile("mapper")
 @Component
@@ -15,8 +22,7 @@ public class FlightQueryResolver implements GraphQLResolver<GraphQLFlight> {
 	
 	
 	public GraphQLRoute route(GraphQLFlight flight) {
-		return null;
-		//return flight.getRoute();
+		return flight.getRoute();
 	}
 
 }
