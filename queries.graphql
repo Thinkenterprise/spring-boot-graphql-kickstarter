@@ -1,7 +1,0 @@
-query {routes{id flightNumber flights{id price}}}
-mutation {createRoute {id flightNumber}}
-subscription {registerRouteCreated{id flightNumber}}
-mutation update{updateRoute(id:2 departure:"BER") {id departure}}
-
-
-
